@@ -1,6 +1,6 @@
 package dao;
 
-import models.Movies;
+import models.Movie;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -17,25 +17,25 @@ public class projectDAO {
     EntityManager em = emf.createEntityManager();
 
     // crud
-    // create Movies
-    private Movies createMovie(Movies movies) {
+    // create Movie
+    private Movie createMovie(Movie movies) {
         em.getTransaction().begin();
         em.persist(movies);
         em.getTransaction().commit();
         return movies; // movies here is a managed object
     }
     // readMovieById
-    private Movies readMovieById(Integer id) {
-        return em.find(Movies.class, id);
+    private Movie readMovieById(Integer id) {
+        return em.find(Movie.class, id);
     }
     // readAllMovies
-    private List<Movies> readAllMovies() {
+    private List<Movie> readAllMovies() {
         // JPQL
-        Query query = em.createQuery("select movie from Movies movie");
-        return (List<Movies>) query.getResultList();
+        Query query = em.createQuery("select movie from Movie movie");
+        return (List<Movie>) query.getResultList();
     }
     // updateMovie
-    private Movies updateMovie(Movies movies) {
+    private Movie updateMovie(Movie movies) {
         em.getTransaction().begin();
         em.merge(movies);
         em.getTransaction().commit();
@@ -44,24 +44,24 @@ public class projectDAO {
     // deleteMovie
     private void deleteMovie(int id) {
         em.getTransaction().begin();
-        Movies movies = em.find(Movies.class, id);
+        Movie movies = em.find(Movie.class, id);
         em.remove(movies);
         em.getTransaction().commit();
     }
 
     public static void main(String[] args) {
         projectDAO dao = new projectDAO();
-        Movies movie = new Movies("test2", 1982, "Love", "RUS", 2.4);
+        Movie movie = new Movie("test3", 1982, "Love", "RUS", 2.4);
         movie = dao.createMovie(movie);
         System.out.println(movie.getName());
 
-//        Movies dianying = dao.readMovieById(3);
+//        Movie dianying = dao.readMovieById(3);
 //        System.out.println(dianying.getName());
 
 //        dao.deleteMovie(1);
 
-//        List<Movies> movies = dao.readAllMovies();
-//        for(Movies movie: movies) {
+//        List<Movie> movies = dao.readAllMovies();
+//        for(Movie movie: movies) {
 //            System.out.println(movie.getName());
 //        }
 

@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by chenggu on 4/4/16.
  */
 @Entity
-public class Movies {
+public class Movie {
     private int id;
     private String name;
     private Integer year;
@@ -14,10 +14,10 @@ public class Movies {
     private String country;
     private Double rating;
 
-    public Movies() {
+    public Movie() {
     }
 
-    public Movies(String name, Integer year, String genra, String country, Double rating) {
+    public Movie(String name, Integer year, String genra, String country, Double rating) {
 //        this.id = id;
         this.name = name;
         this.year = year;
@@ -91,7 +91,7 @@ public class Movies {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Movies movies = (Movies) o;
+        Movie movies = (Movie) o;
 
         if (id != movies.id) return false;
         if (name != null ? !name.equals(movies.name) : movies.name != null) return false;
