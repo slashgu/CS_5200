@@ -51,9 +51,9 @@ public class projectDAO {
 
     public static void main(String[] args) {
         projectDAO dao = new projectDAO();
-        Movie movie = new Movie("test3", 1982, "Love", "RUS", 2.4);
-        movie = dao.createMovie(movie);
-        System.out.println(movie.getName());
+//        Movie movie = new Movie("test3", 1982, "Love", "RUS", 2.4);
+//        movie = dao.createMovie(movie);
+//        System.out.println(movie.getName());
 
 //        Movie dianying = dao.readMovieById(3);
 //        System.out.println(dianying.getName());
@@ -67,6 +67,8 @@ public class projectDAO {
 
 //        dianying.setName("Avater");
 //        dao.updateMovie(dianying);
+        Movie alians = dao.readMovieById(3);
+        System.out.println(alians.getName());
     }
 
 }

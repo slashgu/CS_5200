@@ -1,11 +1,13 @@
 package models;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by chenggu on 4/4/16.
  */
 @Entity
+@Access(AccessType.PROPERTY)
 public class Movie {
     private int id;
     private String name;
@@ -13,6 +15,7 @@ public class Movie {
     private String genra;
     private String country;
     private Double rating;
+    private List<Actor> actors;
 
     public Movie() {
     }
@@ -26,8 +29,16 @@ public class Movie {
         this.rating = rating;
     }
 
+    @OneToMany(mappedBy = "movie")
+    public List<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(List<Actor> actors) {
+        this.actors = actors;
+    }
+
     @Id
-    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -86,31 +97,31 @@ public class Movie {
         this.rating = rating;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Movie movies = (Movie) o;
-
-        if (id != movies.id) return false;
-        if (name != null ? !name.equals(movies.name) : movies.name != null) return false;
-        if (year != null ? !year.equals(movies.year) : movies.year != null) return false;
-        if (genra != null ? !genra.equals(movies.genra) : movies.genra != null) return false;
-        if (country != null ? !country.equals(movies.country) : movies.country != null) return false;
-        if (rating != null ? !rating.equals(movies.rating) : movies.rating != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (year != null ? year.hashCode() : 0);
-        result = 31 * result + (genra != null ? genra.hashCode() : 0);
-        result = 31 * result + (country != null ? country.hashCode() : 0);
-        result = 31 * result + (rating != null ? rating.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        Movie movies = (Movie) o;
+//
+//        if (id != movies.id) return false;
+//        if (name != null ? !name.equals(movies.name) : movies.name != null) return false;
+//        if (year != null ? !year.equals(movies.year) : movies.year != null) return false;
+//        if (genra != null ? !genra.equals(movies.genra) : movies.genra != null) return false;
+//        if (country != null ? !country.equals(movies.country) : movies.country != null) return false;
+//        if (rating != null ? !rating.equals(movies.rating) : movies.rating != null) return false;
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (name != null ? name.hashCode() : 0);
+//        result = 31 * result + (year != null ? year.hashCode() : 0);
+//        result = 31 * result + (genra != null ? genra.hashCode() : 0);
+//        result = 31 * result + (country != null ? country.hashCode() : 0);
+//        result = 31 * result + (rating != null ? rating.hashCode() : 0);
+//        return result;
+//    }
 }

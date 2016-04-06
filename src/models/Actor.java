@@ -1,20 +1,40 @@
 package models;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 
 /**
  * Created by chenggu on 4/6/16.
  */
 @Entity
+@Access(AccessType.PROPERTY)
 public class Actor {
     private int id;
     private String firstName;
     private String lastName;
     private Date dob;
+    private Movie movie;
+
+    public Actor() {
+    }
+
+    public Actor(String firstName, String lastName, Date dob, Movie movie) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = dob;
+        this.movie = movie;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    // TODO: debug here!
+//    @JoinColumn(name = "id")
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
 
     @Id
     @Column(name = "id")
