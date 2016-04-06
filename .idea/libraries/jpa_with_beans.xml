@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jpa-with-beans">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../jpa-with-beans" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../jpa-with-beans" />
+    </SOURCES>
+  </library>
+</component>
