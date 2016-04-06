@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="page">
+    <output-path>$PROJECT_DIR$/out/artifacts/page</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="FinalProject/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="FinalProject" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="org.hibernate:hibernate-entitymanager:Latest" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.38-bin" />
+          <element id="library" level="project" name="JPA 2.0-2.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
