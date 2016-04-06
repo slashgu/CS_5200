@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="596103da-1b9c-490d-92ef-e562918ab9f9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FinalProject/dao/projectDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FinalProject/models/Movies.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/models/Movies.java" afterPath="$PROJECT_DIR$/src/models/Movie.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/page/WEB-INF/classes/models/Movies.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/page/WEB-INF/classes/dao/projectDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/page/WEB-INF/classes/dao/projectDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FinalProject/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/out/production/FinalProject/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/projectDAO.java" afterPath="$PROJECT_DIR$/src/dao/projectDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/page/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/out/artifacts/page/WEB-INF/classes/META-INF/persistence.xml" />
     </list>
     <ignored path="FinalProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -6574,12 +6570,20 @@
       <workItem from="1459803931859" duration="1239000" />
       <workItem from="1459805248809" duration="16865000" />
       <workItem from="1459877990058" duration="766000" />
-      <workItem from="1459909486668" duration="2194000" />
+      <workItem from="1459909486668" duration="2269000" />
     </task>
+    <task id="LOCAL-00001" summary="Change Tabel name of Movies to Movie">
+      <created>1459957368588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1459957368588</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21064000" />
+    <option name="totallyTimeSpent" value="21139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="23" width="1398" height="877" extended-state="6" />
@@ -6629,6 +6633,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change Tabel name of Movies to Movie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Tabel name of Movies to Movie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

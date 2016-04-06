@@ -3,7 +3,7 @@
 
     <persistence-unit name="FinalProject">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>models.Movies</class>
+        <class>models.Movie</class>
         <class>models.User</class>
         <!--<class>models.FavoriteList</class>-->
         <properties>
