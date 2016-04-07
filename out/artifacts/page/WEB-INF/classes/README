@@ -1,0 +1,19 @@
+
+                         JPA Example using Java Beans
+
+There are 4 main implementations of JPA: Hibernate, OpenJPA (Apache), Toplink Essentials and Eclipselink.
+There is a comparison of the 4 implementations. None were the best in everything.
+
+The following are required by a JPA program:
+
+persistence.xml            The configuration file. This must be in META-INF.
+nu.Student, nu.Course      Examples of data classes using properties.
+Test                       Example of a test program that stores objects and then retrieves them.
+
+mysql-connector-java.jar           MySQL driver. Other drivers and databases can be used. Specify the driver in the configuration.
+geronimo-jpa_2.0_spec-1.1.jar      JPA API Version 2.0
+openjpa-2.0.1.jar                  Main OpenJPA component
+commons-lang-2.1.jar               Various extensions to the Java class library
+commons-collections-3.2.1.jar      Extension of the Java Collections Framework
+geronimo-jta_1.1_spec-1.1.1.jar    Apache transaction processing support
+serp-1.13.1.jar                    Java bytecode manipulation (similar to javassist)

@@ -1,7 +1,7 @@
 package models;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by chenggu on 4/6/16.
@@ -26,8 +26,7 @@ public class Actor {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    // TODO: debug here!
-//    @JoinColumn(name = "id")
+    @JoinColumn(name = "movieId")
     public Movie getMovie() {
         return movie;
     }

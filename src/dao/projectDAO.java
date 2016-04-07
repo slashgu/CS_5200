@@ -1,11 +1,13 @@
 package dao;
 
+import models.Actor;
 import models.Movie;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -35,23 +37,46 @@ public class projectDAO {
         return (List<Movie>) query.getResultList();
     }
     // updateMovie
-    private Movie updateMovie(Movie movies) {
+    private Movie updateMovie(Movie movie) {
         em.getTransaction().begin();
-        em.merge(movies);
+        em.merge(movie);
         em.getTransaction().commit();
-        return movies;
+        return movie;
     }
     // deleteMovie
     private void deleteMovie(int id) {
         em.getTransaction().begin();
-        Movie movies = em.find(Movie.class, id);
-        em.remove(movies);
+        Movie movie = em.find(Movie.class, id);
+        em.remove(movie);
         em.getTransaction().commit();
+    }
+
+    private Actor createActor(Actor actor) {
+        em.getTransaction().begin();
+        em.persist(actor);
+        em.getTransaction().commit();
+        return actor;
+    }
+
+    // add an actor
+    public Actor addActor(int movieId, Actor actor) {
+        em.getTransaction().begin();
+        Movie movie = em.getReference(Movie.class, movieId);
+        actor.setMovie(movie);
+        em.persist(actor);
+        em.getTransaction().commit();
+        return actor;
+//        em.getTransaction().begin();
+//        Movie movie = em.find(Movie.class, movieId);
+//        actor.setMovie(movie);
+//        movie.getActors().add(actor);
+//        em.merge(movie);
+//        em.getTransaction().commit();
     }
 
     public static void main(String[] args) {
         projectDAO dao = new projectDAO();
-//        Movie movie = new Movie("test3", 1982, "Love", "RUS", 2.4);
+//        Movie movie = new Movie("test", 1997, null, "USA", 7.7);
 //        movie = dao.createMovie(movie);
 //        System.out.println(movie.getName());
 
@@ -67,8 +92,19 @@ public class projectDAO {
 
 //        dianying.setName("Avater");
 //        dao.updateMovie(dianying);
-        Movie alians = dao.readMovieById(3);
-        System.out.println(alians.getName());
+
+        Actor hicks = new Actor("test1", "test1", new Date(), null);
+//        dao.createActor(hicks);
+        dao.addActor(2, hicks);
+
+
+        Movie aliens = dao.readMovieById(2);
+////        System.out.println(alians.getActors().size());
+//
+        List<Actor> actors = aliens.getActors();
+        for(Actor actor : actors) {
+            System.out.println(actor.getFirstName());
+        }
     }
 
 }

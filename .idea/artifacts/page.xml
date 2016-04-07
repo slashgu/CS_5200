@@ -6,11 +6,11 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="FinalProject" />
+          <element id="library" level="project" name="jpa-with-beans" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="org.hibernate:hibernate-entitymanager:Latest" />
           <element id="library" level="project" name="mysql-connector-java-5.1.38-bin" />
-          <element id="library" level="project" name="JPA 2.0-2.0" />
         </element>
       </element>
     </root>
