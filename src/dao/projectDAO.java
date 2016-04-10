@@ -19,39 +19,40 @@ public class projectDAO {
     EntityManager em = emf.createEntityManager();
 
     // crud
-    // create Movie
-    private Movie createMovie(Movie movies) {
+    // create MovieRest
+    public Movie createMovie(Movie movies) {
         em.getTransaction().begin();
         em.persist(movies);
         em.getTransaction().commit();
         return movies; // movies here is a managed object
     }
     // readMovieById
-    private Movie readMovieById(Integer id) {
+    public Movie readMovieById(Integer id) {
         return em.find(Movie.class, id);
     }
+
     // readAllMovies
-    private List<Movie> readAllMovies() {
+    public List<Movie> readAllMovies() {
         // JPQL
         Query query = em.createQuery("select movie from Movie movie");
         return (List<Movie>) query.getResultList();
     }
     // updateMovie
-    private Movie updateMovie(Movie movie) {
+    public Movie updateMovie(Movie movie) {
         em.getTransaction().begin();
         em.merge(movie);
         em.getTransaction().commit();
         return movie;
     }
     // deleteMovie
-    private void deleteMovie(int id) {
+    public void deleteMovie(int id) {
         em.getTransaction().begin();
         Movie movie = em.find(Movie.class, id);
         em.remove(movie);
         em.getTransaction().commit();
     }
 
-    private Actor createActor(Actor actor) {
+    public Actor createActor(Actor actor) {
         em.getTransaction().begin();
         em.persist(actor);
         em.getTransaction().commit();
@@ -66,39 +67,32 @@ public class projectDAO {
         em.persist(actor);
         em.getTransaction().commit();
         return actor;
-//        em.getTransaction().begin();
-//        Movie movie = em.find(Movie.class, movieId);
-//        actor.setMovie(movie);
-//        movie.getActors().add(actor);
-//        em.merge(movie);
-//        em.getTransaction().commit();
     }
 
     public static void main(String[] args) {
         projectDAO dao = new projectDAO();
-//        Movie movie = new Movie("test", 1997, null, "USA", 7.7);
+//        MovieRest movie = new MovieRest("test", 1997, null, "USA", 7.7);
 //        movie = dao.createMovie(movie);
 //        System.out.println(movie.getName());
 
-//        Movie dianying = dao.readMovieById(3);
+//        MovieRest dianying = dao.readMovieById(3);
 //        System.out.println(dianying.getName());
 
 //        dao.deleteMovie(1);
 
-//        List<Movie> movies = dao.readAllMovies();
-//        for(Movie movie: movies) {
+//        List<MovieRest> movies = dao.readAllMovies();
+//        for(MovieRest movie: movies) {
 //            System.out.println(movie.getName());
 //        }
 
 //        dianying.setName("Avater");
 //        dao.updateMovie(dianying);
 
-        Actor hicks = new Actor("test1", "test1", new Date(), null);
-//        dao.createActor(hicks);
-        dao.addActor(2, hicks);
+//        Actor hicks = new Actor("test1", "test1", new Date(), null);
+//        dao.addActor(2, hicks);
 
 
-        Movie aliens = dao.readMovieById(2);
+        Movie aliens = dao.readMovieById(3);
 ////        System.out.println(alians.getActors().size());
 //
         List<Actor> actors = aliens.getActors();

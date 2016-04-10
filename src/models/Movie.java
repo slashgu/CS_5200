@@ -102,7 +102,7 @@ public class Movie {
 //        if (this == o) return true;
 //        if (o == null || getClass() != o.getClass()) return false;
 //
-//        Movie movies = (Movie) o;
+//        MovieRest movies = (MovieRest) o;
 //
 //        if (id != movies.id) return false;
 //        if (name != null ? !name.equals(movies.name) : movies.name != null) return false;

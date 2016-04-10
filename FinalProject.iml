@@ -41,5 +41,9 @@
     <orderEntry type="library" name="mysql-connector-java-5.1.38-bin" level="project" />
     <orderEntry type="library" name="org.hibernate:hibernate-entitymanager:Latest" level="project" />
     <orderEntry type="library" name="jpa-with-beans" level="project" />
+    <orderEntry type="library" name="javax.servlet" level="application" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-core:2.5.3" level="project" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-annotations:2.5.3" level="project" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.5.3" level="project" />
   </component>
 </module>
