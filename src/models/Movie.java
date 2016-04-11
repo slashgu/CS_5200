@@ -7,6 +7,7 @@ import java.util.List;
  * Created by chenggu on 4/4/16.
  */
 @Entity
+// TODO: public dnum genra
 @Access(AccessType.PROPERTY)
 public class Movie {
     private int id;

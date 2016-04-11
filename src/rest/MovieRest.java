@@ -1,6 +1,7 @@
 package rest;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 /**
@@ -11,9 +12,6 @@ public class MovieRest {
     private String plot;
     private String urlPoster;
     private String title;
-
-    public MovieRest() {
-    }
 
     public String getIdIMDB() {
         return idIMDB;
