@@ -22,6 +22,7 @@
             String idStr = request.getParameter("id");
             String title = request.getParameter("title");
             String country = request.getParameter("country");
+            String comments = request.getParameter("comments");
             Integer year = null;
             if(request.getParameter("year") != null) {
                 year = Integer.parseInt(request.getParameter("year"));
@@ -32,8 +33,8 @@
             }
 //            String genra = request.getParameter("genra");
             if("create".equals(action)) {
-                Movie movieRest = new Movie(title, year, null, country, rating);
-                dao.createMovie(movieRest);
+                Movie movie = new Movie(title, year, null, country, rating, comments);
+                dao.createMovie(movie);
             }
             else if("delete".equals(action)) {
                 Integer id = Integer.parseInt(idStr);
@@ -52,6 +53,7 @@
                 <th>Country</th>
                 <th>Year</th>
                 <th>Rating</th>
+                <th>Comments</th>
                 <th>&nbsp;</th>
             </tr>
             <tr>
@@ -59,25 +61,27 @@
                 <td><input name = "country" class="form-control"></td>
                 <td><input name = "year" class="form-control"></td>
                 <td><input name = "rating" class="form-control"></td>
+                <td><input name = "comments" class="form-control"></td>
                 <td>
                     <button class="btn btn-primary" type="submit" name="action" value="create">Create</button>
                 </td>
             </tr>
         <%
-            for(Movie movieRest : movies) {
+            for(Movie movie : movies) {
 
         %>
             <tr>
                 <td>
-                    <a href="movieDetails.jsp?id=<%= movieRest.getId()%>">
-                    <%= movieRest.getName() %>
+                    <a href="movieDetails.jsp?id=<%= movie.getId()%>">
+                    <%= movie.getName() %>
                     </a>
                 </td>
-                <td><%= movieRest.getCountry() %></td>
-                <td><%= movieRest.getYear() %></td>
-                <td><%= movieRest.getRating() %></td>
+                <td><%= movie.getCountry() %></td>
+                <td><%= movie.getYear() %></td>
+                <td><%= movie.getRating() %></td>
+                <td><%= movie.getComments() %></td>
                 <td>
-                    <a href="movies.jsp?action=delete&id=<%= movieRest.getId()%>" class="btn btn-danger">Delete</a>
+                    <a href="movies.jsp?action=delete&id=<%= movie.getId()%>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         <%

@@ -16,18 +16,30 @@ public class Movie {
     private String genra;
     private String country;
     private Double rating;
+    private String comments;
     private List<Actor> actors;
 
     public Movie() {
     }
 
-    public Movie(String name, Integer year, String genra, String country, Double rating) {
+    public Movie(String name, Integer year, String genra, String country, Double rating, String comments) {
 //        this.id = id;
         this.name = name;
         this.year = year;
         this.genra = genra;
         this.country = country;
         this.rating = rating;
+        this.comments = comments;
+    }
+
+    @Basic
+    @Column(name = "comments")
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
     @OneToMany(mappedBy = "movie")

@@ -20,11 +20,11 @@ public class projectDAO {
 
     // crud
     // create MovieRest
-    public Movie createMovie(Movie movies) {
+    public Movie createMovie(Movie movie) {
         em.getTransaction().begin();
-        em.persist(movies);
+        em.persist(movie);
         em.getTransaction().commit();
-        return movies; // movies here is a managed object
+        return movie; // movies here is a managed object
     }
     // readMovieById
     public Movie readMovieById(Integer id) {
