@@ -81,7 +81,7 @@
                 <td><%= movie.getRating() %></td>
                 <td><%= movie.getComments() %></td>
                 <td>
-                    <a href="movies.jsp?action=delete&id=<%= movie.getId()%>" class="btn btn-danger">Delete</a>
+                    <a href="homepage.jsp?action=delete&id=<%= movie.getId()%>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         <%
