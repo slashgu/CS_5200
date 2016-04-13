@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 
 /**
  * Created by chenggu on 4/9/16.
@@ -42,10 +43,18 @@ public class myApiClient {
         return null;
     }
 
-    public void findMovieByTitle(String title) {
+    public MovieRest[] findMovieByTitle(String title) {
+        title = URLEncoder.encode(title);
         String urlStr = FIND_MOVIE_BY_TITLE.replace("MOVIE_TITLE", title);
 
-        System.out.println(getJasonStringForUrl(urlStr));
+        String json = getJasonStringForUrl(urlStr);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.readValue(json, MovieRest[].class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     private String getJasonStringForUrl(String urlStr) {
@@ -59,11 +68,6 @@ public class myApiClient {
             String out;
             StringBuffer json = new StringBuffer();
             while((out = reader.readLine()) != null) {
-//                 TODO: add \ in front of every "
-//                CharSequence s1 = "\"";
-//                CharSequence s2 = "\\\"";
-//                out = out.replace(s1, s2);
-//                System.out.println(out);
                 json.append(out);
             }
             return json.toString();
@@ -77,7 +81,11 @@ public class myApiClient {
 
         myApiClient client = new myApiClient();
 
-//        MovieRest movieRest = client.findMovieByTitle("Avatar");
+//        MovieRest[] movieRests = client.findMovieByTitle("Avatar");
+//        for(MovieRest movieRest : movieRests) {
+//            System.out.println(movieRest.getPlot());
+//        }
+
         MovieRest movieRest = client.findMovieById("tt0499549");
         System.out.println(movieRest.getPlot());
 //        System.out.println(movieRest.getIdIMDB());

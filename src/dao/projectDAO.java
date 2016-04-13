@@ -69,36 +69,36 @@ public class projectDAO {
         return actor;
     }
 
-    public static void main(String[] args) {
-        projectDAO dao = new projectDAO();
-//        MovieRest movie = new MovieRest("test", 1997, null, "USA", 7.7);
-//        movie = dao.createMovie(movie);
-//        System.out.println(movie.getName());
-
-//        MovieRest dianying = dao.readMovieById(3);
-//        System.out.println(dianying.getName());
-
-//        dao.deleteMovie(1);
-
-//        List<MovieRest> movies = dao.readAllMovies();
-//        for(MovieRest movie: movies) {
+//    public static void main(String[] args) {
+//        projectDAO dao = new projectDAO();
+////        MovieRest movie = new MovieRest("test", 1997, null, "USA", 7.7);
+////        movie = dao.createMovie(movie);
+////        System.out.println(movie.getName());
+//
+////        MovieRest dianying = dao.readMovieById(3);
+////        System.out.println(dianying.getName());
+//
+////        dao.deleteMovie(1);
+//
+//        List<Movie> movies = dao.readAllMovies();
+//        for(Movie movie: movies) {
 //            System.out.println(movie.getName());
 //        }
-
-//        dianying.setName("Avater");
-//        dao.updateMovie(dianying);
-
-//        Actor hicks = new Actor("test1", "test1", new Date(), null);
-//        dao.addActor(2, hicks);
-
-
-        Movie aliens = dao.readMovieById(3);
-////        System.out.println(alians.getActors().size());
 //
-        List<Actor> actors = aliens.getActors();
-        for(Actor actor : actors) {
-            System.out.println(actor.getFirstName());
-        }
-    }
+////        dianying.setName("Avater");
+////        dao.updateMovie(dianying);
+//
+////        Actor hicks = new Actor("test1", "test1", new Date(), null);
+////        dao.addActor(2, hicks);
+//
+//
+//        Movie aliens = dao.readMovieById(3);
+//////        System.out.println(alians.getActors().size());
+////
+//        List<Actor> actors = aliens.getActors();
+//        for(Actor actor : actors) {
+//            System.out.println(actor.getFirstName());
+//        }
+//    }
 
 }

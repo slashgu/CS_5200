@@ -11,7 +11,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Title</title>
+    <title>Movies</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
@@ -40,6 +40,16 @@
                 Integer id = Integer.parseInt(idStr);
                 dao.deleteMovie(id);
             }
+            else if("update".equals(action)) {
+                Integer id = Integer.parseInt(idStr);
+                Movie tmp = dao.readMovieById(id);
+                tmp.setName(title);
+                tmp.setComments(comments);
+                tmp.setCountry(country);
+                tmp.setYear(year);
+                tmp.setRating(rating);
+                dao.updateMovie(tmp);
+            }
 
             List<Movie> movies = dao.readAllMovies();
         %>
@@ -57,13 +67,15 @@
                 <th>&nbsp;</th>
             </tr>
             <tr>
-                <td><input name = "title" class="form-control"></td>
-                <td><input name = "country" class="form-control"></td>
-                <td><input name = "year" class="form-control"></td>
-                <td><input name = "rating" class="form-control"></td>
-                <td><input name = "comments" class="form-control"></td>
+                <td><input name = "id" placeholder="id" value="<%=idStr%>" type="hidden" class="form-control"></td>
+                <td><input name = "title" placeholder="title" value="<%=title%>" class="form-control"></td>
+                <td><input name = "country" placeholder="country" value="<%=country%>" class="form-control"></td>
+                <td><input name = "year" placeholder="year" value="<%=year%>" class="form-control"></td>
+                <td><input name = "rating" placeholder="rating" value="<%=rating%>" class="form-control"></td>
+                <td><input name = "comments" placeholder="comments" value="<%=comments%>" class="form-control"></td>
                 <td>
-                    <button class="btn btn-primary" type="submit" name="action" value="create">Create</button>
+                    <button class="btn btn-success" type="submit" name="action" value="create">Create</button>
+                    <button class="btn btn-info" name="action" value="update">Update</button>
                 </td>
             </tr>
         <%
@@ -82,6 +94,7 @@
                 <td><%= movie.getComments() %></td>
                 <td>
                     <a href="homepage.jsp?action=delete&id=<%= movie.getId()%>" class="btn btn-danger">Delete</a>
+                    <a href="homepage.jsp?action=select&id=<%= movie.getId()%>&title=<%=movie.getName()%>&country=<%=movie.getCountry()%>&year=<%=movie.getYear()%>&rating=<%=movie.getRating()%>&comments=<%=movie.getComments()%>" class="btn btn-warning">Select</a>
                 </td>
             </tr>
         <%

@@ -31,10 +31,10 @@
             Actor actor = new Actor(first, last, new Date(), null);
             dao.addActor(id, actor);
         }
-        Movie movieRest = dao.readMovieById(id);
+        Movie movie = dao.readMovieById(id);
     %>
     <div class="container">
-        <h1>Movie: <%= movieRest.getName()%></h1>
+        <h1>Movie: <%= movie.getName()%></h1>
         <h2>Actors</h2>
         <form action="movieDetails.jsp">
             <input type="hidden" name="id" value="<%= idStr%>"/>
@@ -56,7 +56,7 @@
             </thead>
             <tbody>
             <%
-                List<Actor> actors = movieRest.getActors();
+                List<Actor> actors = movie.getActors();
                 for(Actor actor : actors) {
             %>
             <tr>

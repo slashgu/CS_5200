@@ -45,5 +45,6 @@
     <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-core:2.5.3" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-annotations:2.5.3" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.5.3" level="project" />
+    <orderEntry type="library" name="jersey-bundle-1.19.1" level="project" />
   </component>
 </module>
