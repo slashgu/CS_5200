@@ -79,10 +79,12 @@
 
             %>
             <tr>
+                <td><%= user.getId() %></td>
                 <td>
-                    <%= user.getId() %>
+                    <a href="userDetails.jsp?id=<%=user.getId()%>">
+                    <%= user.getFirstName() %>
+                    </a>
                 </td>
-                <td><%= user.getFirstName() %></td>
                 <td><%= user.getLastName() %></td>
                 <%--<td><%= user.getRating() %></td>--%>
                 <%--<td><%= user.getComments() %></td>--%>

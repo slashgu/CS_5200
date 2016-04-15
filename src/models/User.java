@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by chenggu on 4/6/16.
@@ -14,6 +15,7 @@ public class User {
     private String userName;
     private String password;
     private String email;
+    private List<Movie> movies;
 
     public User() {
     }
@@ -25,6 +27,15 @@ public class User {
         this.userName = userName;
         this.password = password;
         this.email = email;
+    }
+
+    @ManyToMany(mappedBy = "users")
+    public List<Movie> getLikes() {
+        return movies;
+    }
+
+    public void setLikes(List<Movie> movies) {
+        this.movies = movies;
     }
 
     @Basic

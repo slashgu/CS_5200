@@ -1,9 +1,6 @@
 package models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
+import javax.persistence.*;
 
 /**
  * Created by chenggu on 4/13/16.
@@ -13,6 +10,14 @@ import javax.persistence.IdClass;
 public class Likes {
     private int userId;
     private int movieId;
+
+    public Likes() {
+    }
+
+    public Likes(int userId, int movieId) {
+        this.userId = userId;
+        this.movieId = movieId;
+    }
 
     @Id
     @Column(name = "userId")

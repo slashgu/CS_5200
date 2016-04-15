@@ -7,7 +7,7 @@
         <class>models.Movie</class>
         <class>models.User</class>
         <class>models.Actor</class>
-        <!--<class>models.Likes</class>-->
+        <class>models.Likes</class>
         <!--<class>models.Review</class>-->
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/CourseProject"/>

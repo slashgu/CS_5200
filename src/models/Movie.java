@@ -18,6 +18,7 @@ public class Movie {
     private Double rating;
     private String comments;
     private List<Actor> actors;
+    private List<User> users;
 
     public Movie() {
     }
@@ -30,6 +31,19 @@ public class Movie {
         this.country = country;
         this.rating = rating;
         this.comments = comments;
+    }
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "Likes",
+            joinColumns = @JoinColumn(name = "movieId"),
+            inverseJoinColumns = @JoinColumn(name = "userId"))
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
     @Basic

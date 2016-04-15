@@ -1,5 +1,7 @@
 package dao;
 
+import models.Likes;
+import models.Movie;
 import models.User;
 
 import javax.persistence.EntityManager;
@@ -26,10 +28,14 @@ public class userDAO {
         em.getTransaction().commit();
         return user;
     }
+
     // readUserById
     public User readUserById(Integer id) {
         return em.find(User.class, id);
+        // TODO: find the likes of the user
     }
+
+    //
 
     // readAllUsers
     public List<User> readAllUsers() {
@@ -51,13 +57,25 @@ public class userDAO {
         em.getTransaction().commit();
     }
 
-//    public static void main(String[] args) {
-//        userDAO dao = new userDAO();
-////        List<User> users = dao.readAllUsers();
-////        for(User user : users) {
-////            System.out.println(user.getFirstName());
-////        }
-//        User user = dao.readUserById(1);
-//        System.out.println(user.getFirstName());
-//    }
+    // add a likes
+    public Likes createLikes(Likes likes) {
+        em.getTransaction().begin();
+        em.persist(likes);
+        em.getTransaction().commit();
+        return likes;
+    }
+
+
+    public static void main(String[] args) {
+        userDAO dao = new userDAO();
+//
+        User Cheng = dao.readUserById(1);
+//        Likes likes = new Likes(1, 3);
+//        dao.createLikes(likes);
+//
+        List<Movie> movies = Cheng.getLikes();
+        for(Movie movie : movies) {
+            System.out.println(movie.getName());
+        }
+    }
 }
