@@ -68,19 +68,17 @@ public class userDAO {
 
     public static void main(String[] args) {
         userDAO dao = new userDAO();
-
-        User Cheng = dao.readUserById(1);
-        Movie movie_test = new Movie("hello", null, null, null, null, "world");
         projectDAO movieDao = new projectDAO();
 
+//        User Cheng = dao.readUserById(1);
+        Movie movie_test = new Movie("hello", null, null, null, null, "world");
         movie_test = movieDao.createMovie(movie_test);
-        System.out.println(movie_test.getId());
         Likes likes = new Likes(1, movie_test.getId());
         dao.createLikes(likes);
 
-        List<Movie> movies = Cheng.getLikes();
-        for(Movie movie : movies) {
-            System.out.println(movie.getName());
-        }
+//        List<Movie> movies = Cheng.getLikes();
+//        for(Movie movie : movies) {
+//            System.out.println(movie.getName());
+//        }
     }
 }

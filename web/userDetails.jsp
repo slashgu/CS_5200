@@ -29,10 +29,10 @@
     String comments = request.getParameter("comments");
 
     if("create".equals(action)) {
-        Movie movie = new Movie(title, null, null, null, rating, comments);
-        movie = movieDao.createMovie(movie);
+        Movie movie_like = new Movie(title, null, null, null, rating, comments);
+        movie_like = movieDao.createMovie(movie_like);
         // TODO: update likes
-        Likes likes = new Likes(id, movie.getId());
+        Likes likes = new Likes(id, movie_like.getId());
         dao.createLikes(likes);
     }
     User user = dao.readUserById(id);
