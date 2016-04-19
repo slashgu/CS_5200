@@ -14,20 +14,26 @@
 </head>
 <body>
 <%
-    Integer id = null;
-    String idStr = null;
-    if(request.getParameter("id") != null) {
-        idStr = request.getParameter("id");
-        id = Integer.parseInt(idStr);
-    }
+    String idStr = request.getParameter("id");
+    Integer id = Integer.parseInt(idStr);
+
     userDAO dao = new userDAO();
+    projectDAO movieDao = new projectDAO();
 
     String action = request.getParameter("action");
-//    String first = request.getParameter("firstName");
-//    String last = request.getParameter("lastName");
+    String title = request.getParameter("title");
+    Double rating = null;
+    if(request.getParameter("rating") != null) {
+        rating = Double.parseDouble(request.getParameter("rating"));
+    }
+    String comments = request.getParameter("comments");
+
     if("create".equals(action)) {
-//        Likes likes = new Likes();
-//        dao.addLikes(id, likes);
+        Movie movie = new Movie(title, null, null, null, rating, comments);
+        movie = movieDao.createMovie(movie);
+        // TODO: update likes
+        Likes likes = new Likes(id, movie.getId());
+        dao.createLikes(likes);
     }
     User user = dao.readUserById(id);
 %>

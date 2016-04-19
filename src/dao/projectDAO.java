@@ -23,6 +23,7 @@ public class projectDAO {
     public Movie createMovie(Movie movie) {
         em.getTransaction().begin();
         em.persist(movie);
+        em.flush();
         em.getTransaction().commit();
         return movie; // movies here is a managed object
     }

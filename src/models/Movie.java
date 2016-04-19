@@ -66,6 +66,7 @@ public class Movie {
     }
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     public int getId() {
         return id;
     }

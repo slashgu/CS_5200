@@ -15,7 +15,7 @@ public class User {
     private String userName;
     private String password;
     private String email;
-    private List<Movie> movies;
+    public List<Movie> movies;
 
     public User() {
     }
