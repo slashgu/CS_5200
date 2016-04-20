@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="596103da-1b9c-490d-92ef-e562918ab9f9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/userDAO.java" afterPath="$PROJECT_DIR$/src/dao/userDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_hibernate_hibernate_entitymanager_Latest.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_hibernate_hibernate_entitymanager_Latest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/userDetails.jsp" afterPath="$PROJECT_DIR$/web/userDetails.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/users.jsp" afterPath="$PROJECT_DIR$/web/users.jsp" />
     </list>
     <ignored path="FinalProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -7179,10 +7181,11 @@
       <file leaf-file-name="projectDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/projectDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="0">
               <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#796#797#0" expanded="false" />
+                <element signature="e#843#844#0" expanded="false" />
                 <element signature="method#readAllMovies#0;class#projectDAO#0" expanded="false" />
                 <element signature="method#updateMovie#0;class#projectDAO#0" expanded="false" />
                 <element signature="method#deleteMovie#0;class#projectDAO#0" expanded="false" />
@@ -7194,11 +7197,9 @@
       <file leaf-file-name="userDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/userDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="990">
               <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -7206,8 +7207,8 @@
       <file leaf-file-name="userDetails.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/userDetails.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+            <state relative-caret-position="285">
+              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -7216,8 +7217,8 @@
       <file leaf-file-name="homepage.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+            <state relative-caret-position="65">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -7226,7 +7227,7 @@
       <file leaf-file-name="movieDetails.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/movieDetails.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="465">
               <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
               <folding />
             </state>
@@ -7236,15 +7237,9 @@
       <file leaf-file-name="users.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/users.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
-              <folding>
-                <marker date="1461006444000" expanded="true" signature="4:145" placeholder="..." />
-                <marker date="1461006444000" expanded="true" signature="230:284" placeholder="..." />
-                <marker date="1461006444000" expanded="true" signature="719:1992" placeholder="..." />
-                <marker date="1461006444000" expanded="true" signature="3349:3404" placeholder="..." />
-                <marker date="1461006444000" expanded="true" signature="4183:4214" placeholder="..." />
-              </folding>
+            <state relative-caret-position="347">
+              <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -7289,14 +7284,14 @@
         <option value="$PROJECT_DIR$/src/rest/myApiClient.java" />
         <option value="$PROJECT_DIR$/web/movieDetails.jsp" />
         <option value="$PROJECT_DIR$/src/models/Likes.java" />
-        <option value="$PROJECT_DIR$/web/users.jsp" />
         <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/web/homepage.jsp" />
         <option value="$PROJECT_DIR$/src/models/User.java" />
         <option value="$PROJECT_DIR$/src/models/Movie.java" />
         <option value="$PROJECT_DIR$/src/dao/projectDAO.java" />
-        <option value="$PROJECT_DIR$/web/userDetails.jsp" />
         <option value="$PROJECT_DIR$/src/dao/userDAO.java" />
+        <option value="$PROJECT_DIR$/web/users.jsp" />
+        <option value="$PROJECT_DIR$/web/userDetails.jsp" />
       </list>
     </option>
   </component>
@@ -7477,8 +7472,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -8188,7 +8183,8 @@
       <workItem from="1460160764341" duration="32550000" />
       <workItem from="1460420447150" duration="1016000" />
       <workItem from="1460424245249" duration="41865000" />
-      <workItem from="1461006359386" duration="7309000" />
+      <workItem from="1461006359386" duration="7431000" />
+      <workItem from="1461109213712" duration="1210000" />
     </task>
     <task id="LOCAL-00001" summary="Change Tabel name of Movies to Movie">
       <created>1459957368588</created>
@@ -8201,11 +8197,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154451000" />
+    <option name="totallyTimeSpent" value="155783000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="23" width="1396" height="877" extended-state="0" />
-    <editor active="false" />
+    <frame x="44" y="23" width="1396" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -8217,7 +8213,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37961784" sideWeight="0.4970015" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20127389" sideWeight="0.4970015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866243" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22036363" sideWeight="0.36535162" order="4" side_tool="true" content_ui="tabs" />
@@ -8580,7 +8576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -8595,7 +8590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -8623,32 +8617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/37286e16/0e4c8a78-9941-42c4-aafe-48158e51c7cc/CourseProject.User">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/users.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
-          <folding>
-            <marker date="1461006444000" expanded="true" signature="4:145" placeholder="..." />
-            <marker date="1461006444000" expanded="true" signature="230:284" placeholder="..." />
-            <marker date="1461006444000" expanded="true" signature="719:1992" placeholder="..." />
-            <marker date="1461006444000" expanded="true" signature="3349:3404" placeholder="..." />
-            <marker date="1461006444000" expanded="true" signature="4183:4214" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -8670,7 +8638,7 @@
         <state relative-caret-position="465">
           <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -8685,26 +8653,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/movieDetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="465">
           <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/projectDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="0">
           <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#796#797#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
             <element signature="method#readAllMovies#0;class#projectDAO#0" expanded="false" />
             <element signature="method#updateMovie#0;class#projectDAO#0" expanded="false" />
             <element signature="method#deleteMovie#0;class#projectDAO#0" expanded="false" />
@@ -8716,7 +8677,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -8729,7 +8689,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -8740,18 +8699,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/userDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="990">
           <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/37286e16/0e4c8a78-9941-42c4-aafe-48158e51c7cc/CourseProject.User">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/users.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/userDetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+        <state relative-caret-position="285">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
           <folding />
         </state>
       </provider>

@@ -22,14 +22,19 @@
 
     String action = request.getParameter("action");
     String title = request.getParameter("title");
+    String country = request.getParameter("country");
     Double rating = null;
     if(request.getParameter("rating") != null) {
         rating = Double.parseDouble(request.getParameter("rating"));
     }
+    Integer year = null;
+    if(request.getParameter("year") != null) {
+        year = Integer.parseInt(request.getParameter("year"));
+    }
     String comments = request.getParameter("comments");
 
     if("create".equals(action)) {
-        Movie movie_like = new Movie(title, null, null, null, rating, comments);
+        Movie movie_like = new Movie(title, year, null, country, rating, comments);
         movie_like = movieDao.createMovie(movie_like);
         // TODO: update likes
         Likes likes = new Likes(id, movie_like.getId());
@@ -46,11 +51,15 @@
             <thead>
             <tr>
                 <th>Title</th>
+                <th>Country</th>
+                <th>Year</th>
                 <th>Rating</th>
                 <th>Comments</th>
             </tr>
             <tr>
                 <th><input class="form-control" name="title"/></th>
+                <th><input class="form-control" name="contry"/></th>
+                <th><input class="form-control" name="year"/></th>
                 <th><input class="form-control" name="rating"/></th>
                 <th><input class="form-control" name="comments"/></th>
                 <th>
@@ -65,6 +74,8 @@
             %>
             <tr>
                 <td><%= movie.getName()%></td>
+                <td><%= movie.getCountry()%></td>
+                <td><%= movie.getYear()%></td>
                 <td><%= movie.getRating()%></td>
                 <td><%= movie.getComments()%></td>
             </tr>

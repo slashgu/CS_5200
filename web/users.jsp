@@ -63,7 +63,7 @@
                 <th>&nbsp;</th>
             </tr>
             <tr>
-                <td><input name = "id" placeholder="id" value="<%=id%>" readonly class="form-control"></td>
+                <td><input name = "id" placeholder="id" value="<%=id%>" class="form-control"></td>
                 <td><input name = "firstName" placeholder="firstName" value="<%=firstName%>" class="form-control"></td>
                 <td><input name = "lastName" placeholder="lastName" value="<%=lastName%>" class="form-control"></td>
                 <%--<td><input name = "year" placeholder="year" value="<%=year%>" class="form-control"></td>--%>
